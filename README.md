@@ -1,6 +1,3 @@
-# Dev
-
-
 # Acceptance Criteria
 
 |     Given      |       When        |          Then          |
