@@ -37,3 +37,10 @@ def get(index):
 
 def update(index):
     items[index].isCompleted = not items[index].isCompleted
+
+def get_csv():
+    csv_data = "title,category,description\n"
+    for item in items:
+        csv_data += f"{item.title},{item.category},{item.description}\n"
+    return csv_data
+

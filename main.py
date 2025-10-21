@@ -21,3 +21,11 @@ def add():
 def update(index):
     helper.update(index)
     return redirect(url_for("index"))
+
+@app.route("/download")
+def download():
+    return Response(
+        helper.get_csv(),
+        mimetype="text/csv",
+        headers={"Content-disposition": "attachment; filename=data.csv"},
+    )
